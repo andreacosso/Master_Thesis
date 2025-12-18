@@ -1,0 +1,366 @@
+{
+    "config_ndims_10_ncop_1_nsamples_5000_niter_10000": {
+        "fgd": {
+            "name": "fgd",
+            "object_name": "FGDMetric",
+            "class_name": "GMetrics.FGDMetric",
+            "kwargs": {
+                "num_batches": 20,
+                "num_points": 10,
+                "normalise": false
+            },
+            "result_key": "metric_list",
+            "scale_func": "callable: <lambda>",
+            "scale_func_string": "lambda ns, ndims: 1",
+            "test_config": {
+                "niter": 10000,
+                "batch_size_test": 5000,
+                "batch_size_gen": 5000,
+                "small_sample_threshold": 10000000,
+                "dtype_input": "float64",
+                "seed": 42,
+                "use_tf": true,
+                "mirror_strategy": false,
+                "strategy": null,
+                "verbose": true,
+                "is_symb_1": true,
+                "ndims_1": 10,
+                "nsamples_1": 0,
+                "is_symb_2": true,
+                "ndims_2": 10,
+                "nsamples_2": 0,
+                "dtype": "float64",
+                "ndims": 10,
+                "nsamples": 50000000,
+                "small_sample": false,
+                "ncomp": 1
+            },
+            "max_vectorize": 100,
+            "latex": "$t_{\\mathrm{FGD}}$",
+            "null_file": "../outputs/run_53/null_hypothesis/FGD.json",
+            "thresholds": [
+                [
+                    0.68,
+                    [
+                        6800,
+                        3199
+                    ],
+                    0.001167218665967992
+                ],
+                [
+                    0.95,
+                    [
+                        9500,
+                        500
+                    ],
+                    0.005142384775356407
+                ],
+                [
+                    0.99,
+                    [
+                        9900,
+                        100
+                    ],
+                    0.00771801003170435
+                ]
+            ],
+            "null_figure": "../outputs/run_53/null_hypothesis/FGD.pdf"
+        },
+        "mmd": {
+            "name": "mmd",
+            "object_name": "MMDMetric",
+            "class_name": "GMetrics.MMDMetric",
+            "kwargs": {
+                "degree": 4,
+                "block_size": 10000,
+                "normalise": false
+            },
+            "result_key": "metric_list",
+            "scale_func": "callable: <lambda>",
+            "scale_func_string": "lambda ns, ndims: 1",
+            "test_config": {
+                "niter": 10000,
+                "batch_size_test": 5000,
+                "batch_size_gen": 5000,
+                "small_sample_threshold": 10000000,
+                "dtype_input": "float64",
+                "seed": 42,
+                "use_tf": true,
+                "mirror_strategy": false,
+                "strategy": null,
+                "verbose": true,
+                "is_symb_1": true,
+                "ndims_1": 10,
+                "nsamples_1": 0,
+                "is_symb_2": true,
+                "ndims_2": 10,
+                "nsamples_2": 0,
+                "dtype": "float64",
+                "ndims": 10,
+                "nsamples": 50000000,
+                "small_sample": false,
+                "ncomp": 1
+            },
+            "max_vectorize": 2,
+            "latex": "$t_{\\mathrm{MMD}}$",
+            "null_file": "../outputs/run_53/null_hypothesis/MMD.json",
+            "thresholds": [
+                [
+                    0.68,
+                    [
+                        6800,
+                        3199
+                    ],
+                    0.00045073083545688064
+                ],
+                [
+                    0.95,
+                    [
+                        9500,
+                        500
+                    ],
+                    0.002111466658566652
+                ],
+                [
+                    0.99,
+                    [
+                        9900,
+                        100
+                    ],
+                    0.0031355556106151816
+                ]
+            ],
+            "null_figure": "../outputs/run_53/null_hypothesis/MMD.pdf"
+        },
+        "ks": {
+            "name": "ks",
+            "object_name": "KSTest",
+            "class_name": "GMetrics.KSTest",
+            "kwargs": {},
+            "result_key": "statistic_means",
+            "scale_func": "callable: <lambda>",
+            "scale_func_string": "lambda ns, _: np.sqrt(ns)",
+            "test_config": {
+                "niter": 10000,
+                "batch_size_test": 5000,
+                "batch_size_gen": 5000,
+                "small_sample_threshold": 10000000,
+                "dtype_input": "float64",
+                "seed": 42,
+                "use_tf": true,
+                "mirror_strategy": false,
+                "strategy": null,
+                "verbose": true,
+                "is_symb_1": true,
+                "ndims_1": 10,
+                "nsamples_1": 0,
+                "is_symb_2": true,
+                "ndims_2": 10,
+                "nsamples_2": 0,
+                "dtype": "float64",
+                "ndims": 10,
+                "nsamples": 50000000,
+                "small_sample": false,
+                "ncomp": 1
+            },
+            "max_vectorize": 10000,
+            "latex": "$t_{\\overline{\\mathrm{KS}}}$",
+            "null_file": "../outputs/run_53/null_hypothesis/KS.json",
+            "thresholds": [
+                [
+                    0.68,
+                    [
+                        6800,
+                        3199
+                    ],
+                    0.9020003676414489
+                ],
+                [
+                    0.95,
+                    [
+                        9500,
+                        500
+                    ],
+                    1.0070005059242249
+                ],
+                [
+                    0.99,
+                    [
+                        9900,
+                        100
+                    ],
+                    1.0710002481937408
+                ]
+            ],
+            "null_figure": "../outputs/run_53/null_hypothesis/KS.pdf"
+        },
+        "sks": {
+            "name": "sks",
+            "object_name": "SKSTest",
+            "class_name": "GMetrics.SKSTest",
+            "kwargs": {
+                "nslices": 100,
+                "seed_slicing": 0
+            },
+            "result_key": "metric_means",
+            "scale_func": "callable: <lambda>",
+            "scale_func_string": "lambda ns, _: np.sqrt(ns)",
+            "test_config": {
+                "niter": 10000,
+                "batch_size_test": 5000,
+                "batch_size_gen": 5000,
+                "small_sample_threshold": 10000000,
+                "dtype_input": "float64",
+                "seed": 42,
+                "use_tf": true,
+                "mirror_strategy": false,
+                "strategy": null,
+                "verbose": true,
+                "is_symb_1": true,
+                "ndims_1": 10,
+                "nsamples_1": 0,
+                "is_symb_2": true,
+                "ndims_2": 10,
+                "nsamples_2": 0,
+                "dtype": "float64",
+                "ndims": 10,
+                "nsamples": 50000000,
+                "small_sample": false,
+                "ncomp": 1
+            },
+            "max_vectorize": 200,
+            "latex": "$t_{\\mathrm{SKS}}$",
+            "null_file": "../outputs/run_53/null_hypothesis/SKS.json",
+            "thresholds": [
+                [
+                    0.68,
+                    [
+                        6800,
+                        3199
+                    ],
+                    0.8906002156436443
+                ],
+                [
+                    0.95,
+                    [
+                        9500,
+                        500
+                    ],
+                    0.9777002036571503
+                ],
+                [
+                    0.99,
+                    [
+                        9900,
+                        100
+                    ],
+                    1.0304003022611141
+                ]
+            ],
+            "null_figure": "../outputs/run_53/null_hypothesis/SKS.pdf"
+        },
+        "swd": {
+            "name": "swd",
+            "object_name": "SWDMetric",
+            "class_name": "GMetrics.SWDMetric",
+            "kwargs": {
+                "nslices": 100,
+                "seed_slicing": 0
+            },
+            "result_key": "metric_means",
+            "scale_func": "callable: <lambda>",
+            "scale_func_string": "lambda ns, ndims: np.sqrt(ns/ndims)",
+            "test_config": {
+                "niter": 10000,
+                "batch_size_test": 5000,
+                "batch_size_gen": 5000,
+                "small_sample_threshold": 10000000,
+                "dtype_input": "float64",
+                "seed": 42,
+                "use_tf": true,
+                "mirror_strategy": false,
+                "strategy": null,
+                "verbose": true,
+                "is_symb_1": true,
+                "ndims_1": 10,
+                "nsamples_1": 0,
+                "is_symb_2": true,
+                "ndims_2": 10,
+                "nsamples_2": 0,
+                "dtype": "float64",
+                "ndims": 10,
+                "nsamples": 50000000,
+                "small_sample": false,
+                "ncomp": 1
+            },
+            "max_vectorize": 200,
+            "latex": "$t_{\\mathrm{SW}}$",
+            "null_file": "../outputs/run_53/null_hypothesis/SWD.json",
+            "thresholds": [
+                [
+                    0.68,
+                    [
+                        6800,
+                        3199
+                    ],
+                    0.42171714744195987
+                ],
+                [
+                    0.95,
+                    [
+                        9500,
+                        500
+                    ],
+                    0.4800137774487861
+                ],
+                [
+                    0.99,
+                    [
+                        9900,
+                        100
+                    ],
+                    0.5178743278830302
+                ]
+            ],
+            "null_figure": "../outputs/run_53/null_hypothesis/SWD.pdf"
+        },
+        "lr": {
+            "name": "lr",
+            "object_name": "LRMetric",
+            "class_name": "GMetrics.LRMetric",
+            "kwargs": {
+                "null_test": true
+            },
+            "result_key": "lik_ratio_norm_list",
+            "scale_func": "callable: <lambda>",
+            "scale_func_string": "lambda ns, ndims: np.sqrt(ns)",
+            "test_config": {
+                "niter": 10000,
+                "batch_size_test": 5000,
+                "batch_size_gen": 5000,
+                "small_sample_threshold": 10000000,
+                "dtype_input": "float64",
+                "seed": 42,
+                "use_tf": true,
+                "mirror_strategy": false,
+                "strategy": null,
+                "verbose": true,
+                "is_symb_1": true,
+                "ndims_1": 10,
+                "nsamples_1": 0,
+                "is_symb_2": true,
+                "ndims_2": 10,
+                "nsamples_2": 0,
+                "dtype": "float64",
+                "ndims": 10,
+                "nsamples": 50000000,
+                "small_sample": false,
+                "ncomp": 1
+            },
+            "max_vectorize": 50,
+            "latex": "$t_{\\mathrm{LLR}}$",
+            "null_file": "../outputs/run_53/null_hypothesis/LR.json",
+            "thresholds": []
+        }
+    }
+}
