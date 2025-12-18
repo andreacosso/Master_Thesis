@@ -1,2 +1,0 @@
-run_n,seed_train,seed_test,seed_dist,seed_metrics,ndims,nsamples_train,nsamples_val,nsamples_test,correlation,nbijectors,bijector,spline_knots,range_min,hidden_layers,trainable_parameters,non_trainable_parameters,batch_size,activation,regulariser,eps_regulariser,training_device,epochs_input
-53,42,42,42,42,10,0,0,0,,4,MsplineN,8,-14,128-128,407344,0,60000,relu,l2,0.0001,NVIDIA L40S,40
