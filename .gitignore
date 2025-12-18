@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+.ipynb_checkpoints/
+
+# Virtual Env
+.venv
+env/
+venv/
+ENV/
+
+# Weights and Logs (Too heavy)
+*.h5
+*.log
+*.weights
+
+# Huge Evaluation Files (>100MB)
+evaluation/**/*.json
+evaluation/**/*.pdf
+
+# Output folders (Usually generated data)
+outputs/
+# Keep the folder structure but not the files inside generated folders
+!outputs/.gitkeep
+
+# Mac/Linux system files
+.DS_Store
+
+
+
+
+
+
+
+
